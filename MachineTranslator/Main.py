@@ -1,4 +1,5 @@
 #Necessary Library  
+from TextProcessing import text_processing
 import numpy as np
 import typing
 from typing import Any, Tuple
@@ -9,23 +10,7 @@ import matplotlib.ticker as ticker
 import os
 import pathlib
 
+text_processing()
 
 
-def load_data():
-    input_texts=[]
-    target_texts=[]
-    
-    #read dataset file
-    with open('Dataset/eng-vie.txt','r',encoding='utf-8') as f:
-        rows=f.read().split('\n')
-    
-        
-    for row in rows:
-        input_text,target_text,contribution_text = row.split('\t')
 
-        input_texts.append(input_text.lower())
-        target_texts.append(target_text.lower())
-
-    return input_texts, target_texts
-
-input_texts, target_texts =  load_data()

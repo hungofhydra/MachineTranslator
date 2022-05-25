@@ -48,6 +48,7 @@ def text_processing():
     input_texts, target_texts =  load_data()
     BUFFER_SIZE = len(input_texts)
     BATCH_SIZE = 64
+    max_vocab_size = 5000
 
     dataset = tf.data.Dataset.from_tensor_slices((input_texts, target_texts)).shuffle(BUFFER_SIZE)
     dataset = dataset.batch(BATCH_SIZE)
@@ -59,7 +60,7 @@ def text_processing():
     #  print('===========================================')
     #  break
 
-    max_vocab_size = 5000
+    
 
     #Change text to Vector
     #English
@@ -80,5 +81,6 @@ def text_processing():
     #tokens = input_vocab[example_tokens[0].numpy()]
     #' '.join(tokens)
     #print(tokens)
+    return dataset, input_text_processor, target_text_processor
 
 

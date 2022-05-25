@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1b13b856-25fb-40fd-b0fa-cd085c07204f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Main.py</StartupFile>
+    <StartupFile>Attention.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Encoder.py" />
     <Compile Include="Main.py" />
+    <Compile Include="Attention.py" />
+    <Compile Include="ShapeChecker.py" />
     <Compile Include="TextProcessing.py" />
   </ItemGroup>
   <ItemGroup>

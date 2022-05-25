@@ -1,5 +1,6 @@
 #Necessary Library  
 from TextProcessing import text_processing
+import Encoder
 import numpy as np
 import typing
 from typing import Any, Tuple
@@ -10,7 +11,7 @@ import matplotlib.ticker as ticker
 import os
 import pathlib
 
-text_processing()
+
 
 
 

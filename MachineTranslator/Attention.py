@@ -17,7 +17,7 @@ embedding_dim = 256
 units = 1024
 dataset, input_text_processor, target_text_processor = text_processing()
 
-class BahdanauAttention(tf.keras.layers.Layer):
+class Attention(tf.keras.layers.Layer):
   def __init__(self, units):
     super().__init__()
     # For Eqn. (4), the  Bahdanau attention
@@ -54,4 +54,4 @@ class BahdanauAttention(tf.keras.layers.Layer):
     return context_vector, attention_weights
 
 
-attention_layer = BahdanauAttention(units)
+

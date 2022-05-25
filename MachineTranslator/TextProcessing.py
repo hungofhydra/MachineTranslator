@@ -52,12 +52,12 @@ def text_processing():
     dataset = tf.data.Dataset.from_tensor_slices((input_texts, target_texts)).shuffle(BUFFER_SIZE)
     dataset = dataset.batch(BATCH_SIZE)
 
-    for example_input_batch, example_target_batch in dataset.take(1):
-      print(example_input_batch[:1])
-      print()
-      print(example_target_batch[:1])
-      print('===========================================')
-      break
+    #for example_input_batch, example_target_batch in dataset.take(1):
+    #  print(example_input_batch[:1])
+    #  print()
+    #  print(example_target_batch[:1])
+    #  print('===========================================')
+    #  break
 
     max_vocab_size = 5000
 
@@ -67,21 +67,18 @@ def text_processing():
         standardize=tf_lower_and_split_punct,
         max_tokens=max_vocab_size)
     input_text_processor.adapt(input_texts)
-
-
     #Vietnamese
-    output_text_processor = tf.keras.layers.TextVectorization(
+    target_text_processor = tf.keras.layers.TextVectorization(
         standardize=tf_lower_and_split_punct,
         max_tokens=max_vocab_size)
-
-    output_text_processor.adapt(target_texts)
-
-    example_tokens = output_text_processor(example_target_batch)
+    target_text_processor.adapt(target_texts)
 
 
-    input_vocab = np.array(output_text_processor.get_vocabulary())
-    tokens = input_vocab[example_tokens[0].numpy()]
-    ' '.join(tokens)
-    print(tokens)
+
+    #example_tokens = target_text_processor(example_target_batch)
+    #input_vocab = np.array(target_text_processor.get_vocabulary())
+    #tokens = input_vocab[example_tokens[0].numpy()]
+    #' '.join(tokens)
+    #print(tokens)
 
 

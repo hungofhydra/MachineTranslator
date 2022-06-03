@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1b13b856-25fb-40fd-b0fa-cd085c07204f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Decoder.py</StartupFile>
+    <StartupFile>Main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,12 +27,26 @@
     <Compile Include="Attention.py" />
     <Compile Include="ShapeChecker.py" />
     <Compile Include="TextProcessing.py" />
+    <Compile Include="Training.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dataset\" />
+    <Folder Include="modelEnglishToVietnamese\" />
+    <Folder Include="modelEnglishToVietnamese\assets\" />
+    <Folder Include="modelEnglishToVietnamese\variables\" />
+    <Folder Include="modelVietnameseToEnglish\" />
+    <Folder Include="modelVietnameseToEnglish\assets\" />
+    <Folder Include="modelVietnameseToEnglish\variables\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dataset\eng-vie.txt" />
+    <Content Include="Dataset\spa.txt" />
+    <Content Include="modelEnglishToVietnamese\saved_model.pb" />
+    <Content Include="modelEnglishToVietnamese\variables\variables.data-00000-of-00001" />
+    <Content Include="modelEnglishToVietnamese\variables\variables.index" />
+    <Content Include="modelVietnameseToEnglish\saved_model.pb" />
+    <Content Include="modelVietnameseToEnglish\variables\variables.data-00000-of-00001" />
+    <Content Include="modelVietnameseToEnglish\variables\variables.index" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

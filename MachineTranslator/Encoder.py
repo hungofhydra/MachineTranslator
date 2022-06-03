@@ -1,4 +1,7 @@
 #Necessary Library  
+import os
+os.add_dll_directory("C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin")
+from turtle import shape
 from TextProcessing import text_processing
 import numpy as np
 import typing
@@ -10,6 +13,7 @@ import matplotlib.ticker as ticker
 import os
 import pathlib
 from ShapeChecker import ShapeChecker
+from Attention import Attention
 embedding_dim = 256
 units = 1024
 dataset, input_text_processor, target_text_processor = text_processing()

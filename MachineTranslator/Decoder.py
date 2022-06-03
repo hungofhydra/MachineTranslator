@@ -1,4 +1,6 @@
 #Necessary Library  
+import os
+os.add_dll_directory("C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin")
 from turtle import shape
 from TextProcessing import text_processing
 import numpy as np
@@ -13,6 +15,7 @@ import pathlib
 from ShapeChecker import ShapeChecker
 from Encoder import Encoder
 from Attention import Attention
+
 
 embedding_dim = 256
 units = 1024
@@ -106,11 +109,6 @@ Decoder.call = call
 
 
 
-
-
-
-
-s
 for example_input_batch, example_target_batch in dataset.take(1):
     print(example_input_batch[:1])
     print()

@@ -1,4 +1,7 @@
 #Necessary Library  
+import os
+os.add_dll_directory("C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin")
+from turtle import shape
 import numpy as np
 import typing
 from typing import Any, Tuple
@@ -21,7 +24,7 @@ def load_data():
     
         
     for row in rows:
-        input_text,target_text,contribution_text = row.split('\t')
+        input_text,target_text,trash_text = row.split('\t')
 
         input_texts.append(input_text.lower())
         target_texts.append(target_text.lower())
